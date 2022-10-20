@@ -49,7 +49,7 @@
             </li>
 
             <li class="nav-link">
-              <%= link_to '#' do %>
+              <%= link_to new_post_path do %>
                 <i class='bx bx-edit-alt icon'></i>
                 <span class= 'text nav-texts'>My Posts</span>
               <% end %>
@@ -77,19 +77,23 @@
               <i class='bx bxs-moon icon moon' ></i>
               <i class='bx bxs-sun icon sun' ></i>
             </div>
-            <span class="mode-text text" >Dark Mood</span>
+            <span class="mode-text text" >Light Mood</span>
 
             <div class="toggle-switch">
               <span class="switch"></span>    
             </div>
           </li>
         </div>
-
       </div>
-
   </nav>
-    
 
+  <section class= 'home'>
+    <div class="main">
+      <%= yield %>
+    </div>
+  </section>
+    
+  <%= yield %>
     <% flash.each do |name, msg| %>
       <div>
         <%= msg %>

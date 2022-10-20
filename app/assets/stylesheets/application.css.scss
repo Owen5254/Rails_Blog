@@ -54,6 +54,7 @@ body.dark{
     padding: 10px 14px;
     background: var(--sidebar-color);
     transition: var(--tran-05);
+    z-index: 100;
 }
 
 .sidebar.close{
@@ -244,13 +245,32 @@ body.dark .switch::before{
     left: 24px;
 }
 
+/*=========== home ============*/
+
+.home{
+    position: relative;
+    height: 100vh;
+    width: calc(100% - 88px);
+    left: 250px;
+    background: var(--body-color);
+    transition: var(--tran-05);
+}
+
+.sidebar.close ~ .home{
+    left: 88px;
+    width: calc(100% - 88px);
+}
+
+.home .main{
+    padding-left: 18px;
+}
+
+.home .main .text{
+    color: var(--text-color);
+}
+
 /*=========== yield ===========*/
 
-.yield{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .post_wrapper{
     margin-top: 40px;
