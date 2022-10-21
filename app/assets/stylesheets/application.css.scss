@@ -263,6 +263,7 @@ body.dark .switch::before{
 
 .home .main{
     padding-left: 18px;
+    align-items: center;
 }
 
 .home .main .text{
@@ -273,5 +274,26 @@ body.dark .switch::before{
 
 
 .post_wrapper{
+    position: relative;
     margin-top: 40px;
+}
+
+
+
+.form_wrapper textarea{
+    background: #FFF;
+    color: var(--primary-color-light);
+    padding: 1em;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    outline: none;
+    line-height: 1.4;
+    transition: var(--tran-02);
+}
+
+.form_wrapper textarea:focus{
+    cursor: text;
+    color:#063251;
+    background:#e2fbffba;
+    border-color: #e2fbffeb;
 }
