@@ -12,9 +12,9 @@
 
 :root{
     /* ======= colors ======*/ 
-    --body-color: #fef6e4;
-    --sidebar-color: #f3d2c1;
-    --primary-color: #f582ae;
+    --body-color: #fffffe;
+    --sidebar-color: #d8eefe;
+    --primary-color: #3da9fc;
     --primary-color-light: #8bd3dd;
     --toggle-color:#fef6e4;
     --text-color: #094067;
@@ -278,22 +278,45 @@ body.dark .switch::before{
     margin-top: 40px;
 }
 
-
-
 .form_wrapper textarea{
-    background: #FFF;
-    color: var(--primary-color-light);
+    background:#ddfaffad;
+    color: var(--text-color);
     padding: 1em;
-    border: 2px solid transparent;
+    border: 2px solid #90b4ce;
     border-radius: 10px;
     outline: none;
     line-height: 1.4;
-    transition: var(--tran-02);
+    transition: var(--tran-04);
 }
 
 .form_wrapper textarea:focus{
     cursor: text;
     color:#063251;
     background:#e2fbffba;
-    border-color: #e2fbffeb;
+    border-color: #094067;
+}
+
+.form_wrapper input#post_title{
+    background:#ddfaffad;
+    color: var(--text-color);
+    border-radius: 6px;
+    padding: 0.5em;
+    outline: none;
+    border: 2px solid #90b4ce;
+    transition: var(--tran-04);
+}
+
+.form_wrapper input#post_title:focus{
+    cursor: text;
+    color:#063251;
+    background:#e2fbffba;
+    border-color: #094067;
+
+}
+
+/*=========== independent things ===========*/
+
+.back_btn{
+    background-color: var(--primary-color);
+    color: #fffffe;
 }
