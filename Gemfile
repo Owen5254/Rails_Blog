@@ -14,7 +14,9 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 gem 'sass-rails'
 gem 'bootstrap-sass'
-
+# In order to add confirm message
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
+gem 'rails-ujs', '~> 0.1.0'
 
 
 group :development, :test do
