@@ -13,94 +13,87 @@
   </head>
 
   <body>
-
-  <nav class="sidebar">
-    <header>
-      <div class="image-text">
-        <span class="image">
-          <img src="#" alt="#">
-        </span>
-
-        <div class="text header-text">
-          <span class="name">Yu's</span>
-          <span class="blog">Blog</span>
-        </div>
-      </div>
-
-      <i class='bx bx-chevron-left toggle' ></i>
-    </header>
-
-    <div class="menu-bar">
-        <div class="menu">
-          <ul class="menu-links">
-
-            <li class="nav-link">
-              <%= link_to '#' do %>
-                <i class='bx bx-home icon' ></i>
-                <span class= 'text nav-texts'>Home</span>
-              <% end %>
-            </li>
-
-            <li class="nav-link">
-              <%= link_to '#' do %>
-                <i class='bx bx-conversation icon' ></i>
-                <span class= 'text nav-texts'>Chat</span>
-              <% end %>
-            </li>
-
-            <li class="nav-link">
-              <%= link_to posts_path do %>
-                <i class='bx bx-edit-alt icon'></i>
-                <span class= 'text nav-texts'>My Posts</span>
-              <% end %>
-            </li>
-
-            <li class="nav-link">
-              <%= link_to '#' do %>
-                <i class='bx bxs-cat icon' ></i>
-                <span class= 'text nav-texts'>About Me</span>
-              <% end %>
-            </li>
-
-            <li class="nav-link">
-              <%= link_to '#' do %>
-                <i class='bx bx-music icon' ></i>
-                <span class= 'text nav-texts'>Music</span>
-              <% end %>
-            </li>
-          </ul>
-        </div>
-
-        <div class="button-content">
-          <li class="mode">
-            <div class="moon-sun">
-              <i class='bx bxs-moon icon moon' ></i>
-              <i class='bx bxs-sun icon sun' ></i>
-            </div>
-            <span class="mode-text text" >Light Mood</span>
-
-            <div class="toggle-switch">
-              <span class="switch"></span>    
-            </div>
-          </li>
-        </div>
-      </div>
-  </nav>
-
-  <section class= 'home'>
-    <div class="main">
-      <%= yield %>
-    </div>
-  </section>
-    
-  <%= yield %>
-    <% flash.each do |name, msg| %>
-      <div>
-        <%= msg %>
-      </div>
+    <% flash.each do |name, msg| -%>
+      <%= content_tag :div, msg, class: name %>
     <% end %>
-    <div class= 'yield'>
-      <%= yield %>
-    </div>
+    <nav class="sidebar">
+      <header>
+        <div class="image-text">
+          <span class="image">
+            <img src="#" alt="#">
+          </span>
+
+          <div class="text header-text">
+            <span class="name">Yu's</span>
+            <span class="blog">Blog</span>
+          </div>
+        </div>
+
+        <i class='bx bx-chevron-left toggle' ></i>
+      </header>
+
+      <div class="menu-bar">
+          <div class="menu">
+            <ul class="menu-links">
+
+              <li class="nav-link">
+                <%= link_to '#' do %>
+                  <i class='bx bx-home icon' ></i>
+                  <span class= 'text nav-texts'>Home</span>
+                <% end %>
+              </li>
+
+              <li class="nav-link">
+                <%= link_to '#' do %>
+                  <i class='bx bx-conversation icon' ></i>
+                  <span class= 'text nav-texts'>Chat</span>
+                <% end %>
+              </li>
+
+              <li class="nav-link">
+                <%= link_to posts_path do %>
+                  <i class='bx bx-edit-alt icon'></i>
+                  <span class= 'text nav-texts'>My Posts</span>
+                <% end %>
+              </li>
+
+              <li class="nav-link">
+                <%= link_to '#' do %>
+                  <i class='bx bxs-cat icon' ></i>
+                  <span class= 'text nav-texts'>About Me</span>
+                <% end %>
+              </li>
+
+              <li class="nav-link">
+                <%= link_to '#' do %>
+                  <i class='bx bx-music icon' ></i>
+                  <span class= 'text nav-texts'>Music</span>
+                <% end %>
+              </li>
+            </ul>
+          </div>
+
+          <div class="button-content">
+            <li class="mode">
+              <div class="moon-sun">
+                <i class='bx bxs-moon icon moon' ></i>
+                <i class='bx bxs-sun icon sun' ></i>
+              </div>
+              <span class="mode-text text" >Light Mood</span>
+
+              <div class="toggle-switch">
+                <span class="switch"></span>    
+              </div>
+            </li>
+          </div>
+        </div>
+    </nav>
+
+    <section class= 'home'>
+      <div class="main">
+        <%= yield %>
+      </div>
+    </section>
+    
   </body>
 </html>
