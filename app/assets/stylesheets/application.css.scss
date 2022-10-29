@@ -4,6 +4,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap');
 
+@keyframes typing {
+    from { width: 0 }
+}
+@keyframes caret {
+    50% { border-color: transparent; }
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+
+
 *{
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -318,16 +332,37 @@ body.dark .switch::before{
 /*============= About Me ===============*/
 
 #page_wrapper{
-    margin-top: 30px;
+    margin-top: 100px;
     margin-left: 10px;
-    transition: var(--tran-04);
 }
 #content{
+    width: 500px;
+    height: 330px;
+    border-radius: 18px;
+    padding: 10px;
+    padding-left: 30px;
     font-family: 'Noto Sans TC', sans-serif;
     color: var(--text-color);
+    background-color: var(--sidebar-color);
 }
+
+
+#content h1{
+    width: 11em;
+    border-right: .05em solid;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 2s steps(11),
+    caret 1s steps(1) infinite; 
+}
+
 #content p{
     margin: 2px;
+    animation: fadeIn 6s;
+}
+
+#profile_image{
+    animation: fadeIn 2s;
 }
 
 
