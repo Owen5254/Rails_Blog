@@ -2,6 +2,7 @@
 
 /*Google Font Import - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap');
 
 *{
     font-family: 'Poppins', sans-serif;
@@ -313,6 +314,23 @@ body.dark .switch::before{
     border-color: #094067;
 
 }
+
+/*============= About Me ===============*/
+
+#page_wrapper{
+    margin-top: 30px;
+    margin-left: 10px;
+    transition: var(--tran-04);
+}
+#content{
+    font-family: 'Noto Sans TC', sans-serif;
+    color: var(--text-color);
+}
+#content p{
+    margin: 2px;
+}
+
+
 
 /*=========== independent things ===========*/
 
