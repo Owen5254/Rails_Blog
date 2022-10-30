@@ -332,12 +332,14 @@ body.dark .switch::before{
 /*============= About Me ===============*/
 
 #page_wrapper{
-    margin-top: 100px;
-    margin-left: 10px;
+    display: flex;
+    margin-top: 160px;
 }
 #content{
     width: 500px;
-    height: 330px;
+    height: 350px;
+    border-radius: 6px;
+    border: 3px solid #90b4ce;
     border-radius: 18px;
     padding: 10px;
     padding-left: 30px;
@@ -362,6 +364,7 @@ body.dark .switch::before{
 }
 
 #profile_image{
+    margin-left: 200px;
     animation: fadeIn 2s;
 }
 
